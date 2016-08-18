@@ -1,19 +1,26 @@
 /* Custom CSS by Garrett Estrin */
 
+body {
+  margin: 100px auto;
+  width: 800px;
+  height: 800px;
+}
 div {
   height: 90px;
   width: 90px;
   margin: 5px;
-  border: solid black 1px;
+  border: solid black 10px;
   float: left;
+  border-radius: 50%;
+
 
 }
 
 #container {
-  width: 308px;
+  width: 360px;
   height: 308px;
-  border: solid black 1px;
   float: none;
+  border: none;
 }
 
 .green {
