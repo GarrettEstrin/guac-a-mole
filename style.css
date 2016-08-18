@@ -1,0 +1,21 @@
+/* Custom CSS by Garrett Estrin */
+
+div {
+  height: 90px;
+  width: 90px;
+  margin: 5px;
+  border: solid black 1px;
+  float: left;
+
+}
+
+#container {
+  width: 308px;
+  height: 308px;
+  border: solid black 1px;
+  float: none;
+}
+
+.green {
+  background-color: green;
+}
