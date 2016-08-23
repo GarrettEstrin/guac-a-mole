@@ -11,9 +11,18 @@ var holes = document.querySelectorAll('.hole');
 // Mole
 var mole = '<img width="60px" src="mole2.png" alt="mole" align="center" />';
 // functions
+
+// Place mole in random hole at start
+var firstHole = function(){
+  holes[randomInt(9)].innerHTML = mole;
+}
+// Random number function
 function randomInt(n){
   return Math.floor(n * Math.random())
 }
+
+// Functions called on page load
+firstHole();
 
 // clicklisteners for boxes
 holes.forEach(function(el){
