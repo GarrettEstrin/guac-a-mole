@@ -1,31 +1,33 @@
 // Customer Javascript by Garrett Estrin
 
-
+// Score Counter
+var score = 0;
+var scoreBoard = document.getElementById('score-board');
 // create container variable
 var theContainer = document.getElementById('container');
 // create box variables. id=boxNum
-var box1 = document.getElementById('box1');
-var box2 = document.getElementById('box2');
-var box3 = document.getElementById('box3');
-var box4 = document.getElementById('box4');
-var box5 = document.getElementById('box5');
-var box6 = document.getElementById('box6');
-var box7 = document.getElementById('box7');
-var box8 = document.getElementById('box8');
-var box9 = document.getElementById('box9');
+var holes = document.querySelectorAll('.hole');
 
+// Mole
+var mole = '<img width="60px" src="mole2.png" alt="mole" align="center" />';
 // functions
-function makeGreen() {
-  this.style.backgroundColor = 'pink';
+function randomInt(n){
+  return Math.floor(n * Math.random())
 }
 
 // clicklisteners for boxes
-box1.addEventListener('click', makeGreen);
-box2.addEventListener('click', makeGreen);
-box3.addEventListener('click', makeGreen);
-box4.addEventListener('click', makeGreen);
-box5.addEventListener('click', makeGreen);
-box6.addEventListener('click', makeGreen);
-box7.addEventListener('click', makeGreen);
-box8.addEventListener('click', makeGreen);
-box9.addEventListener('click', makeGreen);
+holes.forEach(function(el){
+  el.addEventListener('click', function(){
+    if(el.innerHTML === ""){
+      console.log('miss');
+    }
+    else {
+      console.log('hit');
+      score = score + 100;
+      console.log(score);
+      el.innerHTML = "";
+      scoreBoard.innerHTML = score;
+      holes[randomInt(9)].innerHTML = mole;
+    }
+  })
+});

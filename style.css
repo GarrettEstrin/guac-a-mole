@@ -3,15 +3,19 @@
 body {
   margin: 100px auto;
   width: 800px;
-  height: 800px;
+  height: 400px;
 }
-div {
+.hole {
   height: 90px;
   width: 90px;
   margin: 5px;
   border: solid black 10px;
   float: left;
   border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #98c75e;
+  text-align: center;
 
 
 }
@@ -21,8 +25,18 @@ div {
   height: 308px;
   float: none;
   border: none;
+  margin: 0 auto;
 }
 
-.green {
-  background-color: green;
+#score-board {
+  margin: 20px auto;
+  font-size: 80px;
+  font-family: Helvetica, sans-serif;
+  color: green;
+  text-align: center;
+}
+
+
+img {
+  margin-top: 12px;
 }
