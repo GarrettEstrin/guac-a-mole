@@ -5,6 +5,15 @@ body {
   width: 800px;
   height: 400px;
 }
+
+h1 {
+  font-size: 100px;
+  font-family: Arial, sans-serif;
+  font-weight: 600;
+  text-align: center;
+  color: #98c75e;
+  margin-top: -50px;
+}
 .hole {
   height: 90px;
   width: 90px;
