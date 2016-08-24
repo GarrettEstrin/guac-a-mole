@@ -64,7 +64,10 @@ game.utils.firstHole();
 
 game.holes.forEach(function(el){
   el.addEventListener('click', function(){
-    if(el.innerHTML === ""){
+    if(game.time>9){
+      // Do nothing
+    }
+    else if (el.innerHTML === ""){
       game.scoreBoard.innerHTML = game.score;
     }
     else {
