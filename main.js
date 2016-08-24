@@ -78,13 +78,14 @@ game.holes.forEach(function(el){
 };
 
 // Listeners
-setInterval(function(){if(game.time<10){
+setInterval(function(){
+  if(game.time<10){
   // do nothing
-}else(
-  // game.holes.forEach(function(el){
-  //   el.removeEventListener('click', function(){})
-  // })
-  game.scoreBoard.innerHTML = "Final Score: " + game.score + " !");}, 1000
+}
+else {
+  game.holes.forEach(function(el){
+    el.innerHTML = ""});
+  game.scoreBoard.innerHTML = "Final Score: " + game.score + " !"}}, 1000
 );
 // Functions called from elements
 game.startButton.addEventListener('click', game.init);
